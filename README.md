@@ -1,11 +1,13 @@
 ### This repo is adaptation of the code for the implementation of the paper [CURL: Neural Curve Layers for Global Image Enhancement (ICPR 2020)](https://arxiv.org/pdf/1911.13175) which supports CPU and GPU both (unlike the  [official implementation which supports GPU only](https://github.com/sjmoran/CURL)) and you just have to pass in the Image URL or Image Path to get the inference / final output Image.
 
-# -------------------------------------------------------------------------------------------
-# For usage please check:
-```
-Tutorial.ipynb
-```
-# ------------------------------------------------------------------------------------------
+
+# -------------------------------------------------------------
+## For Usage please follow:
+1. `git clone https://github.com/deshwalmahesh/CURL---cpu-gpu`
+2. Navigate inside the repo using `cd` command 
+3. Open `Tutorial.ipynb`
+# -------------------------------------------------------------
+
 
 # All thanks to:
 
