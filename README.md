@@ -1,8 +1,19 @@
-# CURL: Neural Curve Layers for Global Image Enhancement (ICPR 2020)
+### This repo is adaptation of the code for the implementation of the paper [CURL: Neural Curve Layers for Global Image Enhancement (ICPR 2020)](https://arxiv.org/pdf/1911.13175) which supports CPU and GPU both (unlike the  [official implementation which supports GPU only](https://github.com/sjmoran/CURL)) and you just have to pass in the Image URL or Image Path to get the inference / final output Image.
+
+# -------------------------------------------------------------------------------------------
+# For usage please check:
+```
+Tutorial.ipynb
+```
+# ------------------------------------------------------------------------------------------
+
+# All thanks to:
 
 [Sean Moran](http://www.seanjmoran.com),  [Steven McDonagh](https://smcdonagh.github.io/), [Greg Slabaugh](http://gregslabaugh.net/)
 
 **Huawei Noah's Ark Lab**
+
+
 
 <p>
    Repository links for the paper <i>CURL: Neural Curve Layers for Global Image Enhancement</i>. In this repository you will find a link to the code and information of the datasets. Please raise a Github issue if you need assistance of have any questions on the research. 
