@@ -1,4 +1,10 @@
-from tkinter import Image
+'''
+the app requires 4 parameters in POST request:
+img: Image as a Stream object
+name: Name of the image
+size: Resize the image. My 4GB CUDA goes out of memory. Dynamic for now, remove it in production
+'''
+
 import torch
 import torchvision.transforms.functional as TF
 import numpy as np
@@ -44,8 +50,8 @@ def enhance():
     """
     try:
         image_data = request.files["img"]
-        ext = request.form['ext']
         name = request.form['name']
+        ext = name.split('.')[-1]
         size = int(request.form['size'])
         img = load_image(BytesIO(image_data.read()), size = size)
 
@@ -76,7 +82,7 @@ def enhance():
             buffer.seek(0)
             data = buffer.read()
             data = base64.b64encode(data).decode()
-            return jsonify({'img': data, "extension":ext, "name":name.replace('.','_enhanced.')})
+            return jsonify({'img': data, "name":name.replace('.','_enhanced.')})
             
     except Exception as e:
          return jsonify([f"Inference error: {e}"]),400
