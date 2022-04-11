@@ -178,16 +178,20 @@ class ImageProcessing(object):
             return np.swapaxes(np.swapaxes(img, 1, 3), 2, 3)
 
     @staticmethod
-    def load_image(img_filepath, normaliser):
+    def load_image(img_filepath, normaliser, size = 1024):
         """Loads an image from file as a numpy multi-dimensional array
 
         :param img_filepath: filepath to the image
         :returns: image as a multi-dimensional numpy array
         :rtype: multi-dimensional numpy array
-
         """
-        img = ImageProcessing.normalise_image(np.array(Image.open(img_filepath)), normaliser)  # NB: imread normalises to 0-1
-        return img
+        img = Image.open(img_filepath)
+        if img.mode == 'RGBA' :
+            img = img.convert('RGB')
+
+        img = img.resize((size, size))
+
+        return ImageProcessing.normalise_image(np.array(img), normaliser)  # NB: imread normalises to 0-1
 
     @staticmethod
     def normalise_image(img, normaliser):
