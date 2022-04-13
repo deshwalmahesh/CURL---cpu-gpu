@@ -2,12 +2,16 @@
 
 
 # -------------------------------------------------------------
-## For Usage please follow:
+## Deployment:
 1. `git clone https://github.com/deshwalmahesh/CURL---cpu-gpu`
 2. Navigate inside the repo using `cd` command 
-3. Open `Tutorial.ipynb`
+3. `python deploy_flask_api.py`
+4. Open Postman or any other services to test by sending images. Open `deploy_flask_api.py` to read the documentation about what to send to api.
 # -------------------------------------------------------------
 
+### Note: This api uses a param `size` to control the OOM for CUDA and RAM Overflow for CPU. Just a little bit of change is required only. Raise an issue if you don't know how to tackle that
+
+# ---------------------------------------------------------
 
 # All thanks to:
 
